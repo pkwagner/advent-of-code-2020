@@ -7,7 +7,7 @@ REQUIRED = {"byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"}
 
 with open("day4.txt", "r") as f:
   passports = [set(ENTRY_PATTERN.findall(block)) for block in BLOCK_PATTERN.split(f.read())]
-  valid = list(filter(lambda p: p.issuperset(REQUIRED), passports))
+  valid = list(filter(lambda pp: pp.issuperset(REQUIRED), passports))
 
   print("{} / {}".format(len(valid), len(passports)))
 
@@ -28,10 +28,10 @@ REQUIRED = {
 }
 
 with open("day4.txt", "r") as f:
-  passports = [{k: v for k, v in ENTRY_PATTERN.findall(block)} for block in BLOCK_PATTERN.split(f.read())]
+  passports = [{k: rule for k, rule in ENTRY_PATTERN.findall(block)} for block in BLOCK_PATTERN.split(f.read())]
 
   valid = 0
-  for p in passports:
-    valid += all(map(lambda x: x[0] in p and x[1].match(p[x[0]]), REQUIRED.items()))
+  for pp in passports:
+    valid += all(map(lambda x: x[0] in pp and x[1].match(pp[x[0]]), REQUIRED.items()))
 
   print("{} / {}".format(valid, len(passports)))
