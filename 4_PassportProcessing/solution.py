@@ -28,7 +28,7 @@ REQUIRED = {
 }
 
 with open("day4.txt", "r") as f:
-  passports = [{k: rule for k, rule in ENTRY_PATTERN.findall(block)} for block in BLOCK_PATTERN.split(f.read())]
+  passports = [{k: v for k, v in ENTRY_PATTERN.findall(block)} for block in BLOCK_PATTERN.split(f.read())]
 
   valid = 0
   for pp in passports:
