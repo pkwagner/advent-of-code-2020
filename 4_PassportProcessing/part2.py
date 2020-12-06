@@ -1,6 +1,5 @@
 import re
 
-BLOCK_PATTERN = re.compile("(?:\t*\n){2}")
 ENTRY_PATTERN = re.compile("(\w+):([^\s]+)")
 REQUIRED = {
     "byr": re.compile("19[2-9]\d$|200[012]$"),
@@ -13,7 +12,7 @@ REQUIRED = {
 }
 
 with open("day4.txt", "r") as f:
-  passports = [{k: v for k, v in ENTRY_PATTERN.findall(block)} for block in BLOCK_PATTERN.split(f.read())]
+  passports = [{k: v for k, v in ENTRY_PATTERN.findall(block)} for block in f.read().split("\n\n")]
 
   valid = 0
   for pp in passports:
