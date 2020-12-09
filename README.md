@@ -10,12 +10,12 @@ The snippets are also available as [Jupyter Notebook](https://colab.research.goo
 | Day 1  | O(n²)      | 0.81ms         | O(n³)      | 100.87ms       |
 | Day 2  |            | 2.43ms         |            | 0.96ms         |
 | Day 3  | O(n)       | 0.77ms         | O(n)       | 1.17ms         |
-| Day 4  | O(n)       | 1.56ms         | O(n)       | 1.73ms         |
-| Day 5  |            | 6.72ms         |            | 6.98ms         |
+| Day 4  |            | 1.56ms         |            | 1.73ms         |
+| Day 5  | O(n)       | 6.72ms         | O(n)       | 6.98ms         |
 | Day 6  |            | 1.77ms         |            | 2.67ms         |
 | Day 7  |            | 2.06ms         |            | 1.88ms         |
 | Day 8  |            | 0.43ms         |            | 1.76ms         |
-| Day 9  |            | 4.18ms         |            | 27.07ms        |
+| Day 9  | O(n)       | 4.18ms         | O(n²)      | 27.07ms        |
 | Day 10 |            |                |            |                |
 | Day 11 |            |                |            |                |
 | Day 12 |            |                |            |                |
