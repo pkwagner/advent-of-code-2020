@@ -32,4 +32,4 @@ The snippets are also available as [Jupyter Notebook](https://colab.research.goo
 | Day 23 |            |                |            |                |
 | Day 24 |            |                |            |                |
 
-\* Tested with Google Colab (IPython interpreter)
+\* Tested with Google Colab (IPython interpreter), including full I/O operations, n=1000
