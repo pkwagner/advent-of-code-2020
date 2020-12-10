@@ -8,9 +8,9 @@ with open("day10.txt", "r") as f:
   # Nested loop is limited to MAXGAP iterations because of strict joltage ordering, hence complexity is still O(n)
   solutions = [1] + [0] * (len(joltages) - 1)
   for i in range(1, len(joltages)):
-    for j in range(0, i):
+    for j in range(i - 1, -1, -1):
       if joltages[i] - joltages[j] > MAXGAP:
-        continue
+        break
 
       solutions[i] += solutions[j]
 
